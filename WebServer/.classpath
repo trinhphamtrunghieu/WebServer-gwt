@@ -14,5 +14,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/M4600/git/repository/WebServer/lib/firebase-objc-0.2.zip"/>
+	<classpathentry kind="lib" path="C:/Users/M4600/git/repository/WebServer/lib/shared-test-case-0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
