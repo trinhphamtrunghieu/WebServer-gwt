@@ -58,6 +58,54 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- These dependencies for using firebase -->
+    <dependency>
+    <groupId>org.awaitility</groupId>
+    <artifactId>awaitility</artifactId>
+    <version>4.0.3</version>
+    <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/cglib/cglib-nodep -->
+    <dependency>
+    <groupId>cglib</groupId>
+    <artifactId>cglib-nodep</artifactId>
+    <version>3.3.0</version>
+    <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.firebase/firebase-client-jvm -->
+    <dependency>
+    <groupId>com.firebase</groupId>
+    <artifactId>firebase-client-jvm</artifactId>
+    <version>2.5.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+    <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-core</artifactId>
+    <version>2.2</version>
+    <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-library -->
+    <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-library</artifactId>
+    <version>2.2</version>
+    <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.objenesis/objenesis -->
+    <dependency>
+    <groupId>org.objenesis</groupId>
+    <artifactId>objenesis</artifactId>
+    <version>3.1</version>
+    <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>com.google.firebase</groupId>
+    <artifactId>firebase-admin</artifactId>
+    <version>7.0.1</version>
+    </dependency>
+    
   </dependencies>
   
   <build>
@@ -83,7 +131,7 @@
              see gwt-maven-plugin documentation at codehaus.org --> 
         <configuration>
           <modules>
-            <module>com.google.gwt.sample.webserver.WebServer</module>
+            <module>com.google.gwt.sample.webserver.client.WebServer</module>
           </modules>
           <!-- URL that should be opened by DevMode (gwt:run). -->
           <runTarget>WebServer.html</runTarget>
@@ -141,7 +189,7 @@
         <artifactId>heroku-maven-plugin</artifactId>
         <version>3.0.3</version>
         <configuration>
-            <appName>glacial-brushlands-77663</appName>
+            <appName>enigmatic-earth-69626</appName>
         </configuration>
       </plugin>
     <plugin>

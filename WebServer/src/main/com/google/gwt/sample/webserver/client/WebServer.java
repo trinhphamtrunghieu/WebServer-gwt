@@ -5,7 +5,6 @@ import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.google.firebase.database.ValueEventListener;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.server.Base64Utils;
@@ -22,7 +21,8 @@ import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.WindowResizeListener;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Button;import com.google.gwt.user.client.ui.ChangeListener;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.ChangeListener;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
@@ -413,7 +413,6 @@ public class WebServer implements EntryPoint {
 		private Logger logger = java.util.logging.Logger.getLogger("DeviceDataLogger");
 
 		private String deviceId = null;
-		private ValueEventListener oldDeviceListener = null;
 		private String oldDeviceId = null;
 		
 		final Label deviceNameLabel  = new Label("Device name :");

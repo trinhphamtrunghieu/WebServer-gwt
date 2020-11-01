@@ -102,12 +102,12 @@ public class GetDeviceDetailImpl extends RemoteServiceServlet implements GetDevi
 	}
 
 
-	@Override
-	public Boolean removeListener(ValueEventListener listener, String id) {
-		logger.info("Removing listener of " + id);
-		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("details").child(id);
-		ref.removeEventListener(listener);
-		return true;
-	}
+//	@Override
+//	public Boolean removeListener(ValueEventListener listener, String id) {
+//		logger.info("Removing listener of " + id);
+//		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("details").child(id);
+//		ref.removeEventListener(listener);
+//		return true;
+//	}
 
 }

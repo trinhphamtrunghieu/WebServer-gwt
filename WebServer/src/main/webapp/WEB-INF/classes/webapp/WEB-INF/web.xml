@@ -7,15 +7,31 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.google.gwt.sample.webserver.server.GreetingServiceImpl</servlet-class>
+    <servlet-name>authenticateServlet</servlet-name>
+    <servlet-class>com.google.gwt.sample.webserver.server.AuthenticateImpl</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>getDeviceServlet</servlet-name>
+    <servlet-class>com.google.gwt.sample.webserver.server.GetAllDeviceImpl</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>getDetailServlet</servlet-name>
+    <servlet-class>com.google.gwt.sample.webserver.server.GetDeviceDetailImpl</servlet-class>
   </servlet>
   
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/webserver/greet</url-pattern>
-  </servlet-mapping>
   
+  <servlet-mapping>
+    <servlet-name>getDeviceServlet</servlet-name>
+    <url-pattern>/webserver/getDevice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>authenticateServlet</servlet-name>
+    <url-pattern>/webserver/authenticate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getDetailServlet</servlet-name>
+    <url-pattern>/webserver/details</url-pattern>
+  </servlet-mapping>
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>WebServer.html</welcome-file>
