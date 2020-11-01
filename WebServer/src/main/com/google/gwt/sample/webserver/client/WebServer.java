@@ -367,7 +367,7 @@ public class WebServer implements EntryPoint {
 					oldDeviceId = -1;
 					//stop getting update
 				} else {
-					if (oldDeviceId > 0) DeviceData.getInstance().stopCall();
+//					if (oldDeviceId > 0) DeviceData.getInstance().stopCall();
 					DeviceData.getInstance().setDeviceId(deviceList.get(item));
 					DeviceData.getInstance().updatingData();
 					oldDeviceId = 1;
@@ -493,32 +493,32 @@ public class WebServer implements EntryPoint {
 					} else if (!(result == null) && result.get("result").equals("Not availale")) {
 						stopUpdatingData();
 					} else if (!(result == null)){
-						oldDeviceListener = result.get("listener");
+//						oldDeviceListener = result.get("listener");
 						updateData(result);
 					}
 				}
 			});
 		}
 		
-		public void stopCall() {
-			logger.info("Stop getting data of " + oldDeviceId);
-			getDetailService.removeListener(oldDeviceId, new AsyncCallback<Boolean> (){
-
-				@Override
-				public void onFailure(Throwable caught) {
-					// TODO Auto-generated method stub
-					Window.alert(caught.getMessage());
-				}
-
-				@Override
-				public void onSuccess(Boolean result) {
-					// TODO Auto-generated method stub
-					if (result.booleanValue()) {
-						logger.info("Listener of " + oldDeviceId + " removed");
-					}
-				}
-			});
-		}
+//		public void stopCall() {
+//			logger.info("Stop getting data of " + oldDeviceId);
+//			getDetailService.removeListener(oldDeviceId, new AsyncCallback<Boolean> (){
+//
+//				@Override
+//				public void onFailure(Throwable caught) {
+//					// TODO Auto-generated method stub
+//					Window.alert(caught.getMessage());
+//				}
+//
+//				@Override
+//				public void onSuccess(Boolean result) {
+//					// TODO Auto-generated method stub
+//					if (result.booleanValue()) {
+//						logger.info("Listener of " + oldDeviceId + " removed");
+//					}
+//				}
+//			});
+//		}
 		
 		public void stopUpdatingData() {
 			deviceName.setText("Not available");
