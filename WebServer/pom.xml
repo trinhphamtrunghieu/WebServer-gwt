@@ -131,7 +131,8 @@
              see gwt-maven-plugin documentation at codehaus.org --> 
         <configuration>
           <modules>
-            <module>com.google.gwt.sample.webserver.client.WebServer</module>
+            <moduleName>com.google.gwt.sample.webserver.client.WebServer</moduleName>
+            <moduleShortName>WebServer</moduleShortName>
           </modules>
           <!-- URL that should be opened by DevMode (gwt:run). -->
           <runTarget>WebServer.html</runTarget>
